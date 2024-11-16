@@ -1,0 +1,12 @@
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+  &__search {
+    display: flex;
+    border-radius: 3px;
+  }
+  &__search-btn {
+    padding: 1px;
+  }
+}

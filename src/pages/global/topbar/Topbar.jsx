@@ -3,6 +3,7 @@ import styles from "./topbar.module.scss";
 import { useContext } from "react";
 import { Box, IconButton, useTheme } from "@mui/material";
 import { ColorModeContext, tokens } from "../../../theme";
+//icons
 import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -18,10 +19,11 @@ export default function Topbar() {
   const theme = useTheme(); //from mui
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
+
   return (
     <div className={cn(styles.topbar)}>
-      <div className={cn(styles["topbar__search"])} styles={{ backgroundColor: `${colors.primary[400]}` }}>
-        <InputBase placeholder="Search" />
+      <div className={cn(styles["topbar__search"])} style={{ backgroundColor: `${colors.primary[400]}` }}>
+        <InputBase className={cn(styles["topbar__search-input"])} placeholder="Search" />
         <IconButton type="button">
           <SearchIcon />
         </IconButton>

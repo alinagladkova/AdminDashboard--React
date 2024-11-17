@@ -16,7 +16,7 @@ import Topbar from "./pages/global/topbar/Topbar";
 import { ColorModeContext, useMode } from "./theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
-import Sidebar from "./pages/global/Sidebar";
+import Sidebar from "./pages/global/sidebar/Sidebar";
 
 function App() {
   const [theme, colorMode] = useMode();

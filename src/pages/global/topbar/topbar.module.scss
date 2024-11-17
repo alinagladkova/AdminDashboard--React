@@ -6,6 +6,10 @@
     display: flex;
     border-radius: 3px;
   }
+  &__search-input {
+    flex: 1;
+    margin-left: 2px;
+  }
   &__search-btn {
     padding: 1px;
   }

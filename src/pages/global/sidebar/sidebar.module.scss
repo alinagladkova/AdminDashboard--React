@@ -2,27 +2,43 @@
   position: sticky;
   display: flex;
   flex-direction: column;
-  height: 100vw;
-  width: 13%;
+  height: 100vh;
   top: 0;
   bottom: 0;
   z-index: 10000;
-
+  padding-left: 10px;
+  &__inner {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 3;
+  }
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0 20px 15px;
+    margin: 10px 15px 20px 15px;
+  }
+  &__iconBtn {
+    &:hover {
+      color: #868dfb !important;
+    }
+    &:active {
+      color: #6870fa !important;
+    }
   }
   &__admin-info {
     margin-bottom: 25px;
+    padding: 0 10px;
     text-align: center;
     h2 {
       font-weight: bold;
       margin-top: 10px;
+      margin-bottom: 10px;
     }
   }
-  &__admin-icon {
+  &__admin-avatar {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,15 +59,5 @@
   }
   &__tab {
     padding: 5px 35px 10px 20px;
-    &:hover {
-      color: #868dfb;
-    }
-    &:active {
-      color: #6870fa;
-    }
   }
 }
-
-// .menu-icon {
-//   background-color: transparent !important;
-// }

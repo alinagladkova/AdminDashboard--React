@@ -5,4 +5,13 @@
     margin-left: 20px;
     margin-top: 3px;
   }
+  &:hover {
+    color: #868dfb !important;
+  }
+  // &:active {
+  //   color: #6870fa !important;
+  // }
+}
+.tab--active {
+  color: #6870fa !important;
 }

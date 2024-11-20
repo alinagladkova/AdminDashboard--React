@@ -1,7 +1,7 @@
 import { Typography, useTheme } from "@mui/material";
-import { tokens } from "../../../theme.js";
+import { tokens } from "../../theme.js";
 import cn from "classnames";
-import styles from "./sidebar.module.scss";
+import styles from "./header.module.scss";
 
 export default function Header({ title, subtitle }) {
   const theme = useTheme();

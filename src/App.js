@@ -1,6 +1,10 @@
-import { Dashboard, ViewSidebar } from "@mui/icons-material";
+import { Routes, Route } from "react-router-dom";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./pages/global/topbar/Topbar";
-// Sidebar
+import Sidebar from "./pages/global/sidebar/Sidebar";
+import Dashboard from "./pages/dashboard/Dashboard";
+// Sidebar +
 //Dashboard
 //Team
 //Invoices
@@ -12,11 +16,6 @@ import Topbar from "./pages/global/topbar/Topbar";
 //FAQ
 //Geography
 //Calendar
-
-import { ColorModeContext, useMode } from "./theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import { Routes, Route } from "react-router-dom";
-import Sidebar from "./pages/global/sidebar/Sidebar";
 
 function App() {
   const [theme, colorMode] = useMode();

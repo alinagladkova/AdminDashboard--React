@@ -1,0 +1,18 @@
+.team {
+  margin: 20px;
+  &____grid {
+    margin: 40px 0 0 0;
+    height: 75vh;
+  }
+  &__access-column {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  &__access-text {
+    margin-left: 5px;
+  }
+}

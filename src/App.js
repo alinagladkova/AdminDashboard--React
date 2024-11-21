@@ -4,6 +4,7 @@ import { ColorModeContext, useMode } from "./theme";
 import Topbar from "./pages/global/topbar/Topbar";
 import Sidebar from "./pages/global/sidebar/Sidebar";
 import Dashboard from "./pages/dashboard/Dashboard";
+import Team from "./pages/team/Team";
 // Sidebar +
 //Dashboard
 //Team
@@ -29,7 +30,7 @@ function App() {
             <Topbar></Topbar>
             <Routes>
               <Route path="/" element={<Dashboard />} />
-              {/* <Route path="/team" element={<Team />} /> */}
+              <Route path="/team" element={<Team />} />
             </Routes>
           </main>
         </div>

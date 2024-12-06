@@ -13,7 +13,7 @@ import Header from "../../components/header/Header.jsx";
 export default function Team() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const columns = [
+  const gridColumns = [
     {
       field: "id",
       headerName: "ID",
@@ -54,9 +54,7 @@ export default function Team() {
             {access === "admin" && <AdminPanelSettingsOutlinedIcon />}
             {access === "manager" && <SecurityOutlinedIcon />}
             {access === "user" && <LockOpenOutlinedIcon />}
-            <Typography className={cn(styles[`team__access-text`])} style={{ color: colors.grey[100] }}>
-              {access}
-            </Typography>
+            <Typography style={{ color: colors.grey[100] }}>{access}</Typography>
           </div>
         );
       },
@@ -66,7 +64,16 @@ export default function Team() {
     <div className={cn(styles.team)}>
       <Header title="TEAM" subtitle="Managing the Team Members"></Header>
       <div className={cn(styles[`team__grid`])}>
-        <DataGrid rows={mockDataTeam} columns={columns}></DataGrid>
+        <DataGrid
+          rows={mockDataTeam}
+          columns={gridColumns}
+          sx={{
+            "& .MuiDataGrid-root": { border: "none" },
+            "& .MuiDataGrid-cell": { borderBottom: "none" },
+            "& .name-column--cell": { color: colors.greenAccent[300] },
+            "& .MuiDataGrid-virtualScroller": { backgroundColor: colors.primary[400] },
+          }}
+        ></DataGrid>
       </div>
     </div>
   );
